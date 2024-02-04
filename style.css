@@ -1,0 +1,75 @@
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
+ body{
+   background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+   linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+   linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+   
+ }
+ h1{
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+ }
+
+ img{
+    height: 150px;
+    width: 150px;
+    object-fit:cover;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-top: 3px;
+ }
+ .choices{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 5rem;
+   
+ }
+ .choice{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  
+ }
+
+ .choice:hover{
+    cursor: pointer;
+    background-color: #081b31;
+ }
+
+ .score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+ }
+ #user-score, #comp-score{
+     font-size: 4rem;
+ }
+ .msg-container{
+    margin-top: 2rem;
+    margin-left: 500px;
+    
+ }
+
+ #msg{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    /*text-align: center;*/
+    padding: 10px;
+    border-radius: 1rem;
+ }
