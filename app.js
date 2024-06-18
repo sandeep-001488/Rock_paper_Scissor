@@ -125,3 +125,15 @@ choices.forEach((choice) => {
         playGame(userChoice);
     });
 });
+
+function adjustMarqueeSpeed() {
+    const marquee = document.getElementById('marquee');
+    if (window.innerWidth <= 360) {
+       marquee.setAttribute('scrollamount', '2');
+    } else {
+       marquee.setAttribute('scrollamount', '6');
+    }
+ }
+
+ window.addEventListener('resize', adjustMarqueeSpeed);
+ window.addEventListener('load', adjustMarqueeSpeed);

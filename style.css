@@ -46,6 +46,7 @@ img {
 .choice:hover {
    cursor: pointer;
    animation: spin 1s linear infinite;
+   transform: scale(1.1);
 }
 
 @keyframes spin {
@@ -91,4 +92,78 @@ img {
 
 #restart-btn.animate-button:hover {
    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 360px) {
+   body{
+      max-width: 360px;
+      /* height: 20%; */
+   
+   h1 {
+      width: 100%; /* Ensure h1 takes full width */
+      height: 3rem;
+      line-height: 3rem;
+     
+   }
+   
+   .choices {
+      margin-left: 0; /* Adjust as needed */
+      gap: 1.5rem;
+   }
+   
+   .choice {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      transition: transform 0.2s ease-in-out;
+      animation: none; /* Disable spin animation */
+   }
+   
+   .choice:hover {
+      transform: scale(1.1); /* Only scale on hover */
+   }
+   
+   img {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 30%;
+      box-sizing: border-box;
+      margin-top: 3px;
+      margin-left: 0; /* Adjust as needed */
+   }
+
+   /* .msg-container{
+      margin: 100px;
+      width: 200px;
+      margin-left: 70px;
+      #msg.innerText{
+         width: 200px;
+      }
+    
+   } */
+   .msg-container {
+      margin-top: 1rem; /* Adjust margin for small screens */
+      margin-left: 140px; /* Center the container */
+      /* margin-right: auto; Center the container */
+      width: 90%; /* Adjust width for small screens */
+      text-align: center; /* Center the text inside */
+   }
+
+   #msg {
+      width: 100%; /* Ensure the msg element takes full width */
+      font-size: 0.8rem; /* Adjust font size for readability */
+      padding: 0.4rem; /* Adjust padding for small screens */
+      word-wrap: break-word; 
+   }
+   #restart-btn {
+    /* margin:300px 100px; Adjust the left margin */
+      background-color: #081b31;
+      /* padding-left: 400px; */
+      /* margin-top: 2rem; Add some margin on top for spacing */
+   }
+}
 }
