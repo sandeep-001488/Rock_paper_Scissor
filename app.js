@@ -15,7 +15,7 @@ const genCompChoice = () => {
 
 const drawGame = () => {
     msg.innerText = "Match is drawn! Doesn't matter, try once more";
-    msg.style.backgroundColor = "#081b31";
+    msg.style.backgroundColor = "#ffeb77ff";
     msg.style.marginLeft = '-200px';
 };
 
@@ -51,11 +51,11 @@ const finalWinner = () => {
     if (sumOfBothScore >= 11) {
         if (userScore > compScore) {
             msg.innerText = `Hurray!! Finally you won the match by ${userScore - compScore} points`;
-            msg.style.backgroundColor = "green";
+            msg.style.backgroundColor = "greenyellow";
             msg.style.marginLeft = '-200px';
         } else {
             msg.innerText = `Ohh!! Try again... You lost the match by ${compScore - userScore}`;
-            msg.style.backgroundColor = "red";
+            msg.style.backgroundColor = "rgb(255, 101, 101)";
             msg.style.marginLeft = '-200px';
         }
         disableChoices();
@@ -74,14 +74,14 @@ const showWinner = (userWin, userChoice, compChoice) => {
         sumOfBothScore++;
         userScorePara.innerText = userScore;
         msg.innerText = `Congratulations!!! You won this chance -> ${userChoice} beats ${compChoice}`;
-        msg.style.backgroundColor = "green";
+        msg.style.backgroundColor = "greenyellow";
         msg.style.marginLeft = '-250px';
     } else {
         compScore++;
         sumOfBothScore++;
         compScorePara.innerText = compScore;
         msg.innerText = `Oooopppsss!! You lost this chance, where -> ${compChoice} beats ${userChoice}`;
-        msg.style.backgroundColor = "red";
+        msg.style.backgroundColor = "rgb(255, 101, 101)";
         msg.style.marginLeft = '-250px';
     }
 };
